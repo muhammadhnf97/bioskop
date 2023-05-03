@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import { getTitle, getUpcoming } from "@/getapi/api"
-import Card from "./components/Card"
-import Carousel from "./components/Carousel"
+// import Card from "./components/Card"
+// import Carousel from "./components/Carousel"
 import { BsArrowRightShort } from 'react-icons/bs'
+import MovieCarousel from "./components/MovieCarousel"
 
 export default function Home() {
   const [movie, setMovie] = useState([])
@@ -27,7 +28,7 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <Carousel/>
+      <MovieCarousel/>
       <div className="w-full p-5 mt-10">
         <div className="flex flex-wrap items-center justify-center gap-3">
           {/* <Card movie={movie} /> */}
