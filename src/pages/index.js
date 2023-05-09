@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { getTitle, getUpcoming } from "@/getapi/api"
-// import Card from "./components/Card"
-// import Carousel from "./components/Carousel"
+import { watchnow } from "./lib/moviedata"
 import { BsArrowRightShort } from 'react-icons/bs'
 import MovieCarousel from "./components/MovieCarousel"
 
@@ -28,7 +27,7 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <MovieCarousel/>
+      <MovieCarousel listmovie={watchnow}/>
       <div className="w-full p-5 mt-10">
         <div className="flex flex-wrap items-center justify-center gap-3">
           {/* <Card movie={movie} /> */}
