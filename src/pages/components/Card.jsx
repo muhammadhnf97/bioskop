@@ -1,7 +1,6 @@
 import Image from "next/image"
 
 export default function Card({ movie }) {
-    console.log(movie)
     return (
         <>
         {

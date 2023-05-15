@@ -13,12 +13,12 @@ export default function Home() {
     return(
         <>
         <div className="w-full bg-black p-2 space-y-5">
-            <h2 className="text-2xl text-white font-semibold text-center">{getMovieData?.title}</h2>
-            <div className="flex flex-col items-center justify-center text-justify space-y-5">
-                <div className="relative w-64 h-96 rounded-xl overflow-hidden">
+            <h2 className="text-2xl text-white font-semibold text-center md:text-4xl">{getMovieData?.title}</h2>
+            <div className="flex flex-col items-center justify-center text-justify space-y-5 md:flex-row md:py-5 md:px-20 md:gap-4">
+                <div className="relative w-64 h-96 rounded-xl overflow-hidden  md:w-[22rem] md:h-[31rem]">
                     <Image src={getMovieData?.image} alt="poster" fill  />
                 </div>
-                <div className="text-white space-y-5">
+                <div className="text-white space-y-5 md:flex-1 md:text-lg">
                     <p className="text-white">{getMovieData?.sinopsis}</p>
                     <p>Lama Movie : {getMovieData?.time}</p>
                 </div>

@@ -29,7 +29,7 @@ export default function Carousel() {
 
     return (
         <div className="w-full h-40 relative">
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full border border-red-500">
                 <Image src={getCarousel?.image} alt="image" fill className="object-cover object-center" />
             </div>
             <div className="bg-black w-full h-full absolute top-0 bg-opacity-20">

@@ -1,11 +1,10 @@
-// import { useTheme } from "../context/theme";
-
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { CgMenuMotion } from 'react-icons/cg'
 import { ImCross } from 'react-icons/im'
 import Image from "next/image"
 import { useLogin } from "../context/login"
+import Link from "next/link"
 
 export default function Header() {
     const [isDropDownNavbar, setIsDropDownNavbar] = useState(false)
@@ -43,9 +42,11 @@ export default function Header() {
         <nav className="w-full h-14">
             <div className="px-5 w-full border h-full mx-auto flex justify-between items-center gap-5">
                 <div className="w-fit flex items-center justify-center gap-2">
-                    <div className="relative w-14 h-14">
-                        <Image src={'/images/icon.png'} alt="icon" fill className="object-contain" />
-                    </div>
+                    <Link href={'/'}>
+                        <div className="relative w-14 h-14">
+                            <Image src={'/images/icon.png'} alt="icon" fill className="object-contain" />
+                        </div>
+                    </Link>
                     <p className="text-lg font-bold text-red-800">W<span className="font-semibold text-[#FFBD61]">atch</span>W<span className="font-semibold text-[#FFBD61]">ith</span>M<span className="font-semibold text-[#FFBD61]">e</span></p>
                 </div>
                 <button className="w-10 h-10 border-l flex items-center justify-center duration-150 hover:text-[#FFBD61]" onClick={handleClickDropDownNavbar}><CgMenuMotion className="h-7 w-7" /></button>

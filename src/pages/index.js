@@ -14,8 +14,6 @@ export default function Home() {
     getUpcoming().then(data=>setUpcoming(data.results))
   }, [])
 
-  console.log(upcoming)
-
   return (
     <div className="space-y-2 pt-2">
       <div className="w-full flex justify-between items-center px-5 ">
@@ -30,7 +28,6 @@ export default function Home() {
       <MovieCarousel listmovie={watchnow}/>
       <div className="w-full p-5 mt-10">
         <div className="flex flex-wrap items-center justify-center gap-3">
-          {/* <Card movie={movie} /> */}
         </div>
       </div>
     </div>
