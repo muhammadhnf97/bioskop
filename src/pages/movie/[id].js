@@ -1,8 +1,6 @@
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
 import { watchnow } from "../lib/moviedata"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Home() {
     const router = useRouter()

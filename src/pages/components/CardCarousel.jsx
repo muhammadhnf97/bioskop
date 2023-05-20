@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
-export default function CardCarousel({ poster, pos, slideShowAnimation }) {
+export default function CardCarousel({ poster, pos }) {
 
 
     const [slideCarousel, setSlideCarousel] = useState(null)

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, lazy } from "react"
 import { useTheme } from "next-themes"
 import { CgMenuMotion } from 'react-icons/cg'
 import { ImCross } from 'react-icons/im'
@@ -50,7 +50,28 @@ export default function Header() {
                     <p className="text-lg font-bold text-red-800">W<span className="font-semibold text-[#FFBD61]">atch</span>W<span className="font-semibold text-[#FFBD61]">ith</span>M<span className="font-semibold text-[#FFBD61]">e</span></p>
                 </div>
                 <button className="w-10 h-10 border-l flex items-center justify-center duration-150 hover:text-[#FFBD61]" onClick={handleClickDropDownNavbar}><CgMenuMotion className="h-7 w-7" /></button>
-                <div className="hidden md:flex w-full gap-3 items-center">
+            </div>
+        </nav>
+        {
+            isDropDownNavbar &&
+            <button className="fixed w-full h-full bg-black z-10 bg-opacity-75" onClick={handleClickDropDownNavbar}></button>
+        }
+        <div className={`absolute w-full h-fit bg-[#bde0fe] duration-150 transition-transform space-y-2 py-2 text-center  ${isDropDownNavbar ? 'translate-y-0 opacity-100 z-10' : ' opacity-0 -z-10 -translate-y-4'} md:w-1/4 md:right-0 md:h-full md:fixed p-5`}>
+            <div className="bg-white rounded-lg p-3 flex items-center justify-center gap-5">
+                <Image src={loginData.profil} alt="profil-picture" width={100} height={100} className="object-cover w-20 h-20 rounded-full border-2 border-white" lazy />
+                <div className="text-left">
+                    <p className="text-3xl font-semibold">{loginData.username}</p>
+                    <p>{loginData.email}</p>
+                </div>
+
+            </div>
+            <p className="duration-150 hover:text-gray-800">Sedang Tayang</p>
+            <p className="duration-150 hover:text-gray-800">Nonton Online</p>
+            <p className="duration-150 hover:text-gray-800">PV</p>
+            <p className="duration-150 hover:text-gray-800">Akan Tayang</p>
+            <button className="p-3" onClick={handleClickDropDownNavbar}><ImCross /></button>
+            
+            <div className="flex w-full gap-3 items-center justify-center">
                     <p>Dark</p>
                     <div className="border-2 w-[53px] border-blue-400 flex items-center p-1 rounded-full">
                         <button className={`w-5 h-5 bg-blue-400 hover:bg-blue-500 active:bg-blue-600 rounded-full duration-300 transform ${theme === 'light' ? 'translate-x-5' : 'translate-x-0 invisible'}`} onClick={()=>handleClickDarkMode('dark')}></button>
@@ -58,21 +79,6 @@ export default function Header() {
                     </div>
                     <p>Light</p>
                 </div>
-            </div>
-        </nav>
-        {
-            isDropDownNavbar &&
-            <button className="fixed w-full h-full bg-black z-10 bg-opacity-75" onClick={handleClickDropDownNavbar}></button>
-        }
-        <div className="w-full py-2 text-center bg-[#a2d2ff]">
-            <p className="text-sm">Halo ! <span className="font-semibold">{loginData.username}</span></p>
-        </div>
-        <div className={`absolute w-full h-fit bg-[#bde0fe] duration-150 transition-transform space-y-2 py-2 text-center  ${isDropDownNavbar ? 'translate-y-0 opacity-100 z-10' : ' opacity-0 -z-10 -translate-y-4'}`}>
-            <p className="duration-150 hover:text-gray-800">Sedang Tayang</p>
-            <p className="duration-150 hover:text-gray-800">Nonton Online</p>
-            <p className="duration-150 hover:text-gray-800">PV</p>
-            <p className="duration-150 hover:text-gray-800">Akan Tayang</p>
-            <button className="p-3" onClick={handleClickDropDownNavbar}><ImCross /></button>
         </div>
         </>
     )

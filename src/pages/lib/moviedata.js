@@ -40,3 +40,24 @@ export const watchnow = [
         time: '1h 45min'
     }
 ] 
+
+export const whatsnow = [
+    {
+        frontImage: 'https://asset.tix.id/wp-content/uploads/2023/05/6defd362-15cd-4fd2-b174-1eb2b6998466.jpeg',
+        title: 'Kencangkan Sabuk Pengaman, Balapan Fast Telah X Dimulai Hari Ini!',
+        date: 'Wednesday, 17 May 2023',
+        content: 'Franchise Fast and Furious akhirnya hadir dengan instalasi terbaru mereka berjudul Fast X yang sudah dinantikan ...'
+    },
+    {
+        frontImage: 'https://asset.tix.id/wp-content/uploads/2023/05/37762aee-f60f-45a1-bdbf-c2f04f825231.jpeg',
+        title: 'Evil Dead Rise Resmi Jadi Film Terlaris di Franchise Evil Dead!',
+        date: 'Monday, 15 May 2023',
+        content: 'Masih meramaikan layar bioskop di Indonesia, film Evil Dead Rise resmi dinobatkan sebagai film terlaris ...'
+    },
+    {
+        frontImage: 'https://asset.tix.id/wp-content/uploads/2023/05/05eda78e-8355-4029-851c-4e279e8b5714.jpeg',
+        title: 'Kajiman: Iblis Terkejam Penagih Janji Akan Segera Tayang di Bioskop',
+        date: 'Friday, 12 May 2023',
+        content: 'Bukan hanya horor luar negeri, horor Indonesia juga masih mendominasi bioskop tanah air sebagai film ...'
+    }
+]
